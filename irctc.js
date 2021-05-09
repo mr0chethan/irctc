@@ -5,10 +5,10 @@ const userId="nimasah455"//edit your userId
 const password="Password455"//edit your password
 const source="SBC"//edit with your source railway station code
 const destination="MYS"//edit your destination railway station code
-const date="11/05/2021"//edit your reservation date dd/mm/yyyy
-const trainBook="06316"//edit your train number
-const classBook="2S"//edit your class 2S/SL/CC/3A/2A/1A
-const tatkal=false//true or false
+const date="10/05/2021"//edit your reservation date dd/mm/yyyy
+const trainBook="06531"//edit your train number
+const classBook="SL"//edit your class 2S/SL/CC/3A/2A/1A
+const tatkal=true//true or false
 const mobile="8910748855"//edit your mobile number
 const address="#345, 6th main road, 7th cross"//edit your address
 const PIN="560072"//edit your PIN
@@ -55,17 +55,17 @@ async function main(){
     await page.waitForSelector('[aria-label="Click here to Login in application"]',{visible:true},{delay:200})
     await page.click('[aria-label="Click here to Login in application"]',{delay:200})
     await page.waitForSelector("#userId",{visible:true},{delay:200})
-    await page.type("#userId",userId,{delay:200})
+    await page.type("#userId",userId,{delay:100})
     await page.waitForSelector("#pwd",{visible:true},{delay:200})
-    await page.type("#pwd",password,{delay:200})
+    await page.type("#pwd",password,{delay:100})
    
     //manually type captcha and wait
     await setTimeout(function(){
         page.keyboard.press('Enter')
-    },15000)
+    },12000)
 
     //enters source, destination
-    await page.waitForTimeout(25000)
+    await page.waitForTimeout(20000)
     await page.waitForSelector('[aria-controls="pr_id_1_list"]',{visible:true},{delay:200})
     await page.type('[aria-controls="pr_id_1_list"]',source,{delay:200})
     await page.keyboard.press("Enter",{delay:200})
@@ -98,7 +98,7 @@ async function main(){
     //await page.click('[class="ng-tns-c59-10 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]',{delay:200})
     //await page.click('[class="ng-tns-c59-10 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]',{delay:200})
     //await page.click('[class="ng-tns-c59-10 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]',{delay:200})
-    await page.type('[class="ng-tns-c59-10 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]',date,{delay:200})
+    await page.type('[class="ng-tns-c59-10 ui-inputtext ui-widget ui-state-default ui-corner-all ng-star-inserted"]',date,{delay:100})
     
     //chooses tatkal
     if(tatkal){
@@ -223,11 +223,11 @@ async function main(){
     await page.waitForTimeout(2000)
     //enters mobile, address and PIN
     await page.waitForSelector("#mobileNumber",{delay:200})
-    await page.type("#mobileNumber",mobile,{delay:200})
+    await page.type("#mobileNumber",mobile,{delay:100})
     await page.waitForSelector("#aaa1",{delay:200})
-    await page.type("#aaa1",address,{delay:200})
+    await page.type("#aaa1",address,{delay:100})
     await page.waitForSelector("#aaa4",{delay:200})
-    await page.type("#aaa4",PIN,{delay:200})
+    await page.type("#aaa4",PIN,{delay:100})
 
     //if multiple post offices are with the same PIN selects post office or select manually
     //clicks on post office
@@ -267,7 +267,7 @@ async function main(){
     await page.waitForSelector(".train_Search.btnDefault",{delay:200})
     await page.click(".train_Search.btnDefault",{delay:200})
     //enter the captcha it will wait
-    await page.waitForTimeout(15000)
+    await page.waitForTimeout(12000)
     //clicks on continue
     await page.waitForSelector(".train_Search.btnDefault",{delay:200})
     await page.click(".train_Search.btnDefault",{delay:200})
@@ -284,7 +284,7 @@ async function main(){
     await page.click(".btn.btn-primary.hidden-xs.ng-star-inserted",{delay:200})
     //enters mobile number for paytm
     await page.waitForSelector("#inp",{delay:200})
-    await page.type("#inp",mobile,{delay:200})
+    await page.type("#inp",mobile,{delay:100})
     //clicks on proceed
     await page.waitForSelector('button[class="btn btn-primary w100 pos-r   "]',{delay:200})
     await page.click('button[class="btn btn-primary w100 pos-r   "]',{delay:200})
