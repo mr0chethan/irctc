@@ -288,7 +288,7 @@ async function main(){
     //clicks on proceed
     await page.waitForSelector('button[class="btn btn-primary w100 pos-r   "]',{delay:200})
     await page.click('button[class="btn btn-primary w100 pos-r   "]',{delay:200})
-    //enter OTP to pay and finalize 
+    //enter OTP to pay and finalize booking
 }
 main()
 
