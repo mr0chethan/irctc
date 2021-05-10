@@ -84,7 +84,7 @@ async function main(){
 
     await page.keyboard.press("Enter",{delay:200})
     
-    //click on the destination mannually if it doesn't
+    //click on the destination manually if it doesn't
     await page.waitForTimeout(2000)
 
     //await page.keyboard.press("Enter",{delay:200})
@@ -219,7 +219,7 @@ async function main(){
             }
         }
     }
-    //click on last name mannually if not selected
+    //click on last name manually if not selected
     await page.waitForTimeout(2000)
     //enters mobile, address and PIN
     await page.waitForSelector("#mobileNumber",{delay:200})
