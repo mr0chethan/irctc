@@ -1,7 +1,5 @@
 # irctc
-This is a project made by me for a hackathon organized by pepcoding education pvt ltd. 
-
-The problem this project is targeted to solve is to automate the booking of train tickets on irctc.co.in, especially the tatkal tickets, whose bookings are to be made just one day before the reservation, starting at 10:00am sharp for non-ac classes and 11:00am sharp for ac classes. Many such tickets get over within few minutes. 
+The problem this script is targeted to solve is to automate the booking of train tickets on irctc.co.in, especially the tatkal tickets, whose bookings are to be made just one day before the reservation, starting at 10:00am sharp for non-ac classes and 11:00am sharp for ac classes. Many such tickets get over within few minutes. 
 
 Using this project, the bookings can be done automatically within two minutes. Just a captcha for login and another for payment and the final OTP for payment has to be entered manually.
 
